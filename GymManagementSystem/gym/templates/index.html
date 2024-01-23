@@ -19,6 +19,58 @@
     <link rel="stylesheet" href="{% static 'assets/css/templatemo-training-studio.css' %}">
 
 </head>
+<style>
+.contact-text{
+    font-size: larger;
+    color:black;
+    font-size: 28px;
+    margin-bottom: 20px;
+            
+}
+.contact-no{
+    font-size: larger;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Us section styles */
+#contact-us {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.contact-no {
+    font-size: 24px;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+</style>
 
 <body>
 
@@ -367,12 +419,12 @@
             <div class="col-lg-4"><br>
                 <div class="trainer-item">
                     <div class="down-content">
-                        <span>{{i.titlename}}</span>
+                        <span>{{i.titlename}} </span>
                         <h4>{{i.price}}</h4>
                         <h4>{{i.packageduration}}</h4>
-                        <p>{{i.description|safe}}</p>
+                        <p>{{description|safe}}</p><p> In this pakage Pump up your workouts with a symphony of Zumba, cardio bursts, and targeted muscle-building sessions. . Don't wait, unlock your true fitness potential – contact the gym owner for more information about this package and get ready to transform! </P>
                         
-                        {% comment %} <p>hello</p> {% endcomment %}
+                        
                         <a class="btn btn-danger px-3" href="/apply-booking/{{i.id}}/">Booking Now</a>
                     </div>
                 </div>
@@ -381,6 +433,24 @@
         </div>
     </div>
 </section>
+
+<!-- ***** Contact Us Area Starts ***** -->
+<section class="section" id="contact-us">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-xs-12">
+                <div class="contact-form">
+                    <!-- Contact text -->
+                    <p class="contact-text">Contact with gym staff for additional information about packages. Please contact with this number</p>
+                    <!-- Contact number -->
+                    <p class="contact-no"><big>7747674501</big></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- ***** Testimonials Ends ***** -->
 {% block body %}
 

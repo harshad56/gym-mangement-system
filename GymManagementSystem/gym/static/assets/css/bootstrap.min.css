@@ -4222,14 +4222,13 @@ input[type=submit].btn-block {
     background-color: #e9ecef
 }
 
-/* 
 .custom-file-input:lang(en)~.custom-file-label::after {
     content: "Browse"
 }
 
 .custom-file-input~.custom-file-label[data-browse]::after {
-    content: attr(data-browse) 
-} */
+    content: attr(data-browse)
+}
 
 .custom-file-label {
     position: absolute;
@@ -11135,3 +11134,7 @@ a.text-dark:hover {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+.contact-no {
+    font-size: larger;
+}
