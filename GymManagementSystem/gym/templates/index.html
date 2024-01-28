@@ -70,6 +70,10 @@ body {
     }
 }
 
+.bg-images{
+    background-image: url('static/assets/images/package.jpg')
+   
+}
 </style>
 
 <body>
@@ -336,6 +340,7 @@ body {
 
 <section class="section" id="schedule">
     <div class="container">
+        
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading dark-bg">
@@ -403,9 +408,12 @@ body {
 </section>
 
 <!-- ***** Testimonials Starts ***** -->
-<section class="section" id="trainers">
+<section class="section" id="trainers"  >
+   
     <div class="container">
+       
         <div class="row">
+            
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2>Pricing <em>Plans</em></h2>
@@ -413,23 +421,27 @@ body {
                 </div>
             </div>
         </div>
-
-        <div class="row" >
-            {% for i in package %}
-            <div class="col-lg-4"><br>
-                <div class="trainer-item">
-                    <div class="down-content">
-                        <span>{{i.titlename}} </span>
-                        <h4>{{i.price}}</h4>
-                        <h4>{{i.packageduration}}</h4>
-                        <p>{{description|safe}}</p><p> In this pakage Pump up your workouts with a symphony of Zumba, cardio bursts, and targeted muscle-building sessions. . Don't wait, unlock your true fitness potential – contact the gym owner for more information about this package and get ready to transform! </P>
-                        
-                        
-                        <a class="btn btn-danger px-3" href="/apply-booking/{{i.id}}/">Booking Now</a>
+        <div class="bg-images">
+            <div class="row" >
+                
+                
+                    {% for i in package %}
+                    <div class="col-lg-4"><br>
+                    
+                        <div class="trainer-item">
+                            <div class="down-content">
+                                <span>{{i.titlename}} </span>
+                                <h4>{{i.price}}</h4>
+                                <h4>{{i.packageduration}}</h4>
+                                <p>{{i.description|safe}}</p>
+                                
+                                
+                                <a class="btn btn-danger px-3" href="/apply-booking/{{i.id}}/">Booking Now</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>
