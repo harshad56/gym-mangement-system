@@ -90,7 +90,7 @@
                                         <div class="col-sm-6">
                                             <label class="col-form-label">Price</label>
                                             <input type="text" name="price" class="form-control"
-                                                   placeholder="Enter Price(In Rs.)" required>
+                                                   placeholder="Enter Price(In Rs.)"onkeydown="return /[0-9-]/i.test(event.key) || event.key == 'Backspace'" required>
                                         </div>
 
                                     </div>
